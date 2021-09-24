@@ -1,0 +1,8 @@
+﻿@using Microsoft.AspNetCore.Http
+@model NutritionWebApp.Models.User
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Hello @Context.Session.GetString("Email")</h2>
+

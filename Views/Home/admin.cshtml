@@ -1,0 +1,87 @@
+﻿@model IEnumerable<NutritionWebApp.Models.User>
+@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="pull-right">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Expert
+                </button>
+                <div class="dropdown-menu" data-toggle="modal" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">List of Experts</a>
+                    <a class="dropdown-item" href="#">Add new Expert</a>
+                </div>
+            </div>
+            @*<div class="btn-group">
+            <button class="btn btn-success">
+                Expert
+            </button>
+            <button class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right">
+                <li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="margin-left:10px">
+                        List of Experts
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="margin-left:10px">
+                        Add Expert
+                    </button>
+                </li>
+            </ul>
+        </div>*@
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="padding-left:20px">Registered Users</h2>
+            @if (Model.Any())
+            {
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Email Id</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.UserID</td>
+                            <td>@item.name</td>
+                            <td>@item.age</td>
+                            <td>@item.height</td>
+                            <td>@item.weight</td>
+                            <td>@item.Email</td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>There are no registered users.</p>
+
+            }
+        </div>
+    </div>
+</body>

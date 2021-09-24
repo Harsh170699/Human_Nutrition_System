@@ -1,0 +1,344 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+
+@* Nutrition image with content *@
+<main role="main" id="main-content" tabindex="-1" class="body-wrapper main_section">
+    <div>
+        <div class="region region-content">
+            <div id="block-wvi-2018-content" class="block block-system block-system-main-block block--wvi-2018-content">
+                <div class="group group--full group--sector">
+                    <div>
+                        <div class="field-office__heroes">
+                            <div>
+                                <div class="eck-entity hero--sector hero--default component-hero image-align- text-align- text-color-white background-color-green">
+                                    <div class="hero__background">
+                                        <div>
+                                            <div class="field field--name-thumbnail field--type-image field--label-hidden">
+                                                <picture>
+                                                    @*<source media="(min-width: 1500px)" type="image/jpeg" data-srcset="/sites/default/files/styles/hero_rectangle/public/2019-04/D030-0899-179-2.jpg?itok=jgp9heFm 1x, /sites/default/files/styles/hero_rectangle/public/2019-04/D030-0899-179-2.jpg?itok=jgp9heFm 2x" />*@
+                                                    @*<source media="(min-width: 1500px)" type="image/jpeg" data-srcset="~/images/D030-0899-179-2.jpg 1x, ~/images/D030-0899-179-2.jpg 2x" />*@
+                                                    <source media="(min-width: 1500px)" type="image/jpeg" srcset="~/images/D030-0899-179-2.jpg 1x, ~/images/D030-0899-179-2.jpg 2x" />
+                                                    <source media="(min-width: 960px)" type="image/jpeg" srcset="~/images/D030-0899-179-2.jpg 1x, ~/images/D030-0899-179-2.jpg 2x" />
+                                                    <source media="(min-width: 768px)" type="image/jpeg" srcset="~/images/D030-0899-179-2.jpg 1x, ~/images/D030-0899-179-2.jpg 2x" />
+                                                    <source media="(min-width: 480px)" type="image/jpeg" srcset="~/images/D030-0899-179-2.jpg 1x, ~/images/D030-0899-179-2.jpg 2x" />
+                                                    <source type="image/jpeg" data-srcset="~/images/D030-0899-179-2.jpg?itok=PCTmGa44 1x, ~/images/D030-0899-179-2.jpg 2x" />
+                                                    <img alt="A boy eats food from a pouch in Rohyinga. " class="lazyload" src="~/images/D030-0899-179-2.jpg" typeof="foaf:Image" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hero__content--column">
+                                        <div class="hero__content--inner">
+                                            <div class="hero__subtitle">
+                                                Our Work in health
+                                            </div>
+                                            <h2 class="hero__title">
+                                                Nutrition
+                                            </h2>
+                                            <div class="hero__description">
+                                                <div class="field field--name-field-component-description field--type-text-long field--label-hidden">
+                                                    <p>
+                                                        When we talk about nutrition, we envision a world where every child has the opportunity for life in all its fullness. Good nutrition is an essential foundation for health and development, yet malnutrition continues to be the world’s most serious health problem and the single-biggest contributor to child mortality. As the largest private humanitarian organisation. Our goal is to provide a balanced and healthy diet across our global programming reach. Its important to make sure you are getting the nutrients, vitamins, and minerals your body needs to function properly.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hero__texture">
+                                        <img alt="Nutrition icon" class="lazyload" src="~/images/Nutrition_0.svg" typeof="foaf:Image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@* Video slider *@
+@*<div class="eck-entity component--media background-color-white accent-color-grey js-slider">
+        <div class="component-media-wrapper field field--name-field-component-media field--type-entity-reference field--label-hidden">
+            <div></div>
+            <div class="field field--name-field-media-oembed-video field--type-string field--label-hidden">
+                <iframe src="/media/oembed?url=https%3A//youtu.be/b01NDKTEaDI&amp;max_width=0&amp;max_height=0&amp;hash=eNegcJDG5luPD4bBb4xjCc5f-W9scMDEBcQEX6Q08zs" frameborder="0" allowtransparency="true" width="200" height="113" class="media-oembed-content" title="World Vision staff members in Laos have an important message for World Breastfeeding Week"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+
+    <div class="field field--name-field-media-oembed-video field--type-string field--label-hidden">
+        <iframe src="/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3D3q2EoMS6QKw&amp;max_width=0&amp;max_height=0&amp;hash=kfrYUgAJ9cAjSzSze3QPoXXQo_YpQDwUULyEOr8PK2k" frameborder="0" allowtransparency="true" width="200" height="113" class="media-oembed-content" title="World Vision Afgthanistan - Fighting Malnutrition"></iframe>
+    </div>*@
+<div class="eck-entity component--media background-color-white accent-color-grey js-slider">
+
+    <div class="component-media-wrapper field field--name-field-component-media field--type-entity-reference field--label-hidden">
+        <div>
+            <div>
+                <div class="field field--name-field-media-oembed-video field--type-string field--label-hidden">
+                    @*<iframe src="/media/oembed?url=https%3A//youtu.be/b01NDKTEaDI&amp;max_width=0&amp;max_height=0&amp;hash=eNegcJDG5luPD4bBb4xjCc5f-W9scMDEBcQEX6Q08zs" frameborder="0" allowtransparency width="200" height="113" class="media-oembed-content" title="World Vision staff members in Laos have an important message for World Breastfeeding Week"></iframe>*@
+                    @*<iframe width="560" height="315" src="https://www.youtube.com/embed/b01NDKTEaDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/c4aPtCTUYio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div>
+
+
+                <div class="field field--name-field-media-oembed-video field--type-string field--label-hidden">
+                    @*<iframe src="/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3D3q2EoMS6QKw&amp;max_width=0&amp;max_height=0&amp;hash=kfrYUgAJ9cAjSzSze3QPoXXQo_YpQDwUULyEOr8PK2k" frameborder="0" allowtransparency width="200" height="113" class="media-oembed-content" title="World Vision Afgthanistan - Fighting Malnutrition"></iframe>*@
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3q2EoMS6QKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+        @*<div>
+                <div>
+
+
+                    <div class="field field--name-field-media-oembed-video field--type-string field--label-hidden">
+                        <iframe src="/media/oembed?url=https%3A//youtu.be/b01NDKTEaDI&amp;max_width=0&amp;max_height=0&amp;hash=eNegcJDG5luPD4bBb4xjCc5f-W9scMDEBcQEX6Q08zs" frameborder="0" allowtransparency width="200" height="113" class="media-oembed-content" title="World Vision staff members in Laos have an important message for World Breastfeeding Week"></iframe>
+                    </div>
+
+                </div>
+            </div>*@
+    </div>
+</div>
+
+@* Related Stories *@
+<div class="eck-entity component--view component--view--related-stories">
+    <div class="view__header"><h3>Approches that willto keep you healthy...</h3></div>
+    <div class="view__content">
+        <div class="views-element-container">
+            <div class="view--related-stories js-view-dom-id-1544c4ec48a4e3abb401083bbcd24ad765827a6545484ae74789dcf783eab9fc views-view--related-stories views-view--related-stories--">
+                <div class="views-row">
+                    <article role="article" about="/stories/nutrition/supporting-women-exclusively-breastfeed-sierra-leone" class="node--story card component-card view-mode-card">
+                        <a href="/stories/nutrition/supporting-women-exclusively-breastfeed-sierra-leone" style="text-decoration:none">
+                            <div class="card__image">
+                                <img src="~/images/W0_m3un1f2QG05Vgw3yL3LPkKOEnRSYBiE1u2BGIQR8.jpg" alt="" typeof="foaf:Image" />
+
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+
+                                    <h6 class="title">
+                                        <span>Body Mass Index(BMI)</span>
+                                    </h6>
+
+                                </div>
+                                <div class="card__description">
+                                    The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is healthy.
+                                </div>
+                                <span class="card__btn">Book an expert</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="views-row">
+                    <article role="article" about="/stories/nutrition/nutrition-growth-call-action-2020" class="node--story card component-card view-mode-card">
+                        <a href="/stories/nutrition/nutrition-growth-call-action-2020" style="text-decoration:none">
+                            <div class="card__image">
+                                <div>
+
+
+                                    <div class="field field--name-field-media-image field--type-image field--label-hidden">
+                                        <picture>
+                                            <source media="(min-width: 960px)" type="image/jpeg" data-srcset="~/images/D055-0857-26.JPG_643576_0.jpg 1x" />
+                                            <source media="(min-width: 768px)" type="image/jpeg" data-srcset="~/images/D055-0857-26.JPG_643576_0.jpg 1x" />
+                                            <source type="image/jpeg" data-srcset="~/images/D055-0857-26.JPG_643576_0.jpg 1x" />
+                                            <img alt="N4G Nutrition image" class="lazyload" src="~/images/D055-0857-26.JPG_643576_0.jpg" typeof="foaf:Image" />
+
+                                        </picture>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+
+                                    <h6 class="title">
+                                        <span>Relative Fat Mass(RFM)</span>
+                                    </h6>
+
+                                </div>
+                                <div class="card__description">
+                                    The beauty of RFM is that it can be determined with nothing more sophisticated than a tape measure and some simple math.
+                                </div>
+                                <span class="card__btn">Book an expert</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="views-row">
+                    <article role="article" about="/health/video/malnutrition-silent-killer-afghan-children" class="node--story card component-card view-mode-card">
+                        <a href="/health/video/malnutrition-silent-killer-afghan-children" style="text-decoration:none">
+                            <div class="card__image">
+                                <img src="~/images/9rnoeT5JMv1l95W_wQ1yMY5q3e04e2phvY-T4Hoqt5s.jpg" alt="" typeof="foaf:Image" />
+
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+
+                                    <h6 class="title">
+                                        <span>Body Adiposity Index(BAI)</span>
+                                    </h6>
+
+                                </div>
+                                <div class="card__description">
+                                    
+                                    The body adiposity index is a method of estimating the amount of body fat in humans.
+
+                                </div>
+                                <span class="card__btn">Book an expert</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <footer>
+                    <a href="/stories/nutrition" class="btn btn--tertiary">More Stories</a>
+                </footer>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@* related stories and related publications *@
+<div class="eck-entity component--view component--view--related-publications">
+    <div class="view__header"><h3>Related Publications</h3></div>
+    <div class="view__content">
+        <div class="views-element-container">
+            <div class="view--related-publications js-view-dom-id-8f56718064e692b3208970f6a8e014c3a2d45f5e38947726559623de59efc990 views-view--related-publications views-view--related-publications--">
+                <div class="views-row">
+                    <article role="article" about="/publications/field-guide/coronavirus-health-crisis/management-wasting-context-covid-19" class="node--publication card component-card view-mode-card">
+                        <a href="/publications/field-guide/coronavirus-health-crisis/management-wasting-context-covid-19" style="text-decoration:none">
+                            <div class="card__image">
+                                <div class="field field--name-field-image field--type-entity-reference field--label-hidden">
+                                    <div>
+                                        <div class="field field--name-thumbnail field--type-image field--label-hidden">
+                                            <img alt="Management of wasting in the context of COVID-19" class="lazyload" src="~/images/Health%20and%20Nutrition%20Technical%20brief%20cover_edited.jpg" typeof="foaf:Image" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+
+                                    <h6 class="title">
+                                        <span>Management of Wasting in the context of COVID-19</span>
+                                    </h6>
+                                </div>
+                                <span class="card__btn">Read more</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="views-row">
+                    <article role="article" about="/publications/field-guide/coronavirus-health-crisis/adapting-positive-deviance-hearth-plus-context" class="node--publication card component-card view-mode-card">
+                        <a href="/publications/field-guide/coronavirus-health-crisis/adapting-positive-deviance-hearth-plus-context" style="text-decoration:none">
+                            <div class="card__image">
+                                <div class="field field--name-field-image field--type-entity-reference field--label-hidden">
+                                    <div>
+                                        <div class="field field--name-thumbnail field--type-image field--label-hidden">
+                                            <img alt="COVID-19 Program adaptations for PD Hearth" class="lazyload" src="~/images/COVID-19%20program%20adaptations%20for%20PD%20Hearth_Cover_edited.jpg" typeof="foaf:Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title"
+                                    <h6 class="title">
+                                        <span>Adapting Positive Deviance Hearth Plus in the context of COVID-19</span>
+                                    </h6>
+                                </div>
+                                <span class="card__btn">Read more</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="views-row">
+                    <article role="article" about="/publications/policy-briefing/health/covid-19-risks-childrens-health-and-nutrition" class="node--publication card component-card view-mode-card">
+                        <a href="/publications/policy-briefing/health/covid-19-risks-childrens-health-and-nutrition" style="text-decoration:none">
+                            <div class="card__image">
+                                <div class="field field--name-field-image field--type-entity-reference field--label-hidden">
+                                    <div>
+                                        <div class="field field--name-thumbnail field--type-image field--label-hidden">
+                                            <img alt="COVID-19 Policy brief cover image" class="lazyload" src="~/images/COVID-19%20policy%20brief%20risks%20to%20children%27s%20health%20and%20nutrition_edited.jpg" typeof="foaf:Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+
+                                    <h6 class="title">
+                                        <span>COVID-19 Risks to children&#039;s health and nutrition</span>
+                                    </h6>
+
+                                </div>
+                                <span class="card__btn">Read more</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="views-row">
+                    <article role="article" about="/health/publication/enrich-news-volume-3" class="node--publication card component-card view-mode-card">
+                        <a href="/health/publication/enrich-news-volume-3" style="text-decoration:none">
+                            <div class="card__image">
+                                <div class="field field--name-field-image field--type-entity-reference field--label-hidden">
+                                    <div>
+                                        <div class="field field--name-thumbnail field--type-image field--label-hidden">
+                                            <img class="lazyload" src="~/images/ENRICH%20News%20Nov%202018.png" typeof="foaf:Image" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <div class="card__title">
+
+                                    <h6 class="title">
+                                        <span>ENRICH News Volume 3</span>
+                                    </h6>
+
+                                </div>
+                                <span class="card__btn">Read more</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                @*<footer>
+                    <a href="/publications/nutrition" class="btn btn--tertiary">More Publications</a>
+                </footer>*@
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@*<div class="eck-entity component-cta-hero component-cta background-color-orange accent-color-white image-align-full-width layout-full-width">
+    <div class="cta__image">
+        <div>
+            <div class="field field--name-field-media-image field--type-image field--label-hidden">  <img alt="A baby smiles as she gets weighed" class="lazyload" data-src="/sites/default/files/2019-03/D485-0571-61_481434-web.jpg" typeof="foaf:Image" />*@
+<script src="~/js/js_PnkX3hcClPl9hJ3heYfdWy1ZwHUYKDSVvfY0vqoELqg.js"></script>
+@*<script src="~/js/eu_cookie_compliance.js?v=1.9" defer></script>*@
+

@@ -1,0 +1,79 @@
+﻿@model NutritionWebApp.Models.User
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+<div class="form-horizontal">
+    <form asp-controller="Home" asp-action="Register" method="post">
+        @if (ViewBag.Message != null)
+        {
+            <div class="form-control">
+                <div class="col-md-10">@ViewBag.Message</div>
+            </div>
+        }
+
+        <div class="form-group">
+            <label asp-for="name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="age" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+        </div>
+        @*<div class="form-group">
+            <label asp-for="height" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="height" class="form-control" />
+                <span asp-validation-for="height" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="weight" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="weight" class="form-control" />
+                <span asp-validation-for="weight" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="waist" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="waist" class="form-control" />
+                <span asp-validation-for="waist" class="text-danger"></span>
+            </div>
+        </div>*@
+        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmPassword" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">Register</button>
+            </div>
+        </div>
+    </form>
+</div>

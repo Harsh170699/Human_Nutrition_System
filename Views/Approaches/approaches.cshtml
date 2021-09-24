@@ -1,0 +1,171 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@model NutritionWebApp.Models.User
+@{
+    ViewData["Title"] = "Approaches";
+}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body style="background-color:#E6E6FA">
+    <h4 style="margin:10px; text-align:center">@ViewData["Title"]</h4>
+    <hr />
+    <div>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="~/images/BMI2.png" alt="Card image cap" style="height:273px" />
+                <div class="card-footer">
+                    <p class="card-text">It combines a person's weight with their height and ensures whether a person has the correct weight for their height.</p>
+                    @if (Context.Session.GetString("UserID") != null)
+                    {
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter1">
+                        Measure BMI
+                    </button>
+                    }
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="~/images/RFM.png" alt="Card image cap" style="height:273px" />
+                <div class="card-footer">
+                    <p class="card-text">The relative fat mass (RFM) index estimates body fat percentage based on the ratio of height and waist measurements.</p>
+                    @if (Context.Session.GetString("UserID") != null)
+                    {
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+                        Measure RFM
+                    </button>
+                    }
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="~/images/Dt.png" alt="Card image cap" style="height:273px" />
+                <div class="card-footer">
+                    <p class="card-text">A healthy diet is a diet that helps maintain or improve overall health. A healthy diet provides the body with essential nutrition: fluid, macron & micronutrients.</p>
+                    <a href="~/images/Dietchart.png" alt="Image description" target="_blank" style="display: inline-block; background-image: url('~/wwwroot/images/Dietchart.png');"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">View Diet-Chart</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">BMI(Body Mass index)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Height</span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Your Height" aria-label="Username" aria-describedby="basic-addon1" id="height-input">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Weight</span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Your Weight" aria-label="Username" aria-describedby="basic-addon1" id="weight-input">
+                        </div>
+                        <hr />
+                        <button type="button" class="btn btn-primary" id="btn_bmi">Calculate BMI</button>
+                        <hr />
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text text--extra-bold" id="basic-addon1">Your BMI:</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="bmi-output">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Suggestions</span>
+                            </div>
+                            <b><textarea class="form-control" aria-label="With textarea" id="bmi-status"></textarea></b>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">RFM(Relative Fat Mass)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Height</span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Your Height" aria-label="Username" aria-describedby="basic-addon1" id="height-input-rfm">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Waist</span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Your Waist" aria-label="Username" aria-describedby="basic-addon1" id="waist-input-rfm">
+                        </div>
+                        <hr />
+                        @*calculate RFM*@
+                        <button type="button" class="btn btn-primary" id="btn_rfm">Calculate RFM</button>
+                        <hr />
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text text--extra-bold" id="basic-addon1">Your RFM:</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="rfm-output">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Suggestions</span>
+                            </div>
+                            <textarea class="form-control" aria-label="With textarea" id="bmi-status"></textarea>
+                        </div>
+                        @*suggestions pending*@
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">BAI</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <img class="card-img-top" src="~/images/Dietchart.png" alt="Card image cap" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="~/js/bmi.js"></script>
+    <script src="~/js/rfm.js"></script>
+</body>
